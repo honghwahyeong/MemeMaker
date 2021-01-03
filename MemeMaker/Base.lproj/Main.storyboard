@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="P42-UN-7fS">
+                                <rect key="frame" x="121" y="60" width="172" height="194.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MemeMaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwp-uJ-iCh">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZrF-tI-USK">
+                                        <rect key="frame" x="0.0" y="86.5" width="172" height="32"/>
+                                        <segments>
+                                            <segment title="☀️"/>
+                                            <segment title="🌧"/>
+                                            <segment title="💨"/>
+                                            <segment title="❄️"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="topCaptionSegmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="wrx-BH-Fhp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 날씨는?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz5-aR-w1o">
+                                        <rect key="frame" x="0.0" y="165.5" width="172" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pNP-xV-UPd">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="eOe-Uh-Myo"/>
+                                    <constraint firstAttribute="width" constant="240" id="jZQ-eC-4vV"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="UaR-Pd-5tt">
+                                <rect key="frame" x="132" y="614" width="151" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부위를 고르세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPT-iv-xE1">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uZ5-NW-tKN">
+                                        <rect key="frame" x="13" y="94" width="125" height="32"/>
+                                        <segments>
+                                            <segment title="상의"/>
+                                            <segment title="하의"/>
+                                            <segment title="신발"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="bottomCaptionSegmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="406-Jm-LUp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P42-UN-7fS" secondAttribute="trailing" constant="121" id="6xu-v2-lbf"/>
+                            <constraint firstItem="UaR-Pd-5tt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="L2O-tP-IDG"/>
+                            <constraint firstItem="pNP-xV-UPd" firstAttribute="top" secondItem="P42-UN-7fS" secondAttribute="bottom" constant="73.5" id="Ujs-tM-Lq4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UaR-Pd-5tt" secondAttribute="trailing" constant="131" id="UpV-iD-w53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pNP-xV-UPd" secondAttribute="trailing" constant="87" id="itd-rP-0ux"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UaR-Pd-5tt" secondAttribute="bottom" constant="123" id="mKp-cw-cS9"/>
+                            <constraint firstItem="P42-UN-7fS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="sH5-Dk-TpB"/>
+                            <constraint firstItem="UaR-Pd-5tt" firstAttribute="top" secondItem="pNP-xV-UPd" secondAttribute="bottom" constant="46" id="v9v-TI-eyO"/>
+                            <constraint firstItem="pNP-xV-UPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="w6i-Io-frO"/>
+                            <constraint firstItem="P42-UN-7fS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="wbM-Tr-y2X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="pNP-xV-UPd" id="H4r-x5-NUq"/>
+                        <outlet property="bottomCaptionLabel" destination="WPT-iv-xE1" id="jTz-B9-4gQ"/>
+                        <outlet property="bottomCaptionSegmentedControl" destination="uZ5-NW-tKN" id="ut0-9N-ryB"/>
+                        <outlet property="topCaptionLabel" destination="Vz5-aR-w1o" id="gn3-fI-DKm"/>
+                        <outlet property="topCaptionSegmentedControl" destination="ZrF-tI-USK" id="X2w-He-L44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
